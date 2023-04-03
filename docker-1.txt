@@ -1,0 +1,58 @@
+1) sudo su
+
+2) apt update -y
+
+3) apt install docker.io -y
+
+4) service docker start
+
+5) docker images   #it will show me the list of all the docker images
+
+6) docker pull alpine   # this command i got from dockerhub.comm -> explore -> alpine
+
+7) docker images
+
+8) docker run -it --name c01 ubuntu /bin/bash
+
+(it will create a container with name c01 and ubuntu as a base image 
+and will let us enter inside the container (it) and interact with it via shell)
+
+you will enter inside the container c01
+
+8.1) touch file1 file2   #create file1 and file2 (blank files)
+
+8.2) exit   # to come out of the container
+
+9) docker run -it --name c02 ubuntu /bin/bash
+
+9.1) ls   #you will not see file1 and file2 created in c01 which proves c01 and c02 is isolated from each other
+
+9.2) exit
+
+10) docker ps -a  #list all the processes of the container
+
+##############to enter inside the container ########
+
+11) docker start c02   #this command will start the container c02
+
+12) docker attach c02   #this command with let u inside the container c02
+
+(if you try to attach to stop container : You cannot attach to a stopped container, start it first)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
